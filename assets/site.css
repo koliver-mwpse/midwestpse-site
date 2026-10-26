@@ -159,8 +159,9 @@ body{background:var(--ink) radial-gradient(1200px 600px at 85% -10%,rgba(70,179,
 @media (max-width:1100px) and (min-width:901px){.nav a{padding:9px 9px;font-size:14px}}
 .split>*,.grid>*{min-width:0}
 .vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
-.rb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.rb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
 .rb-feat .vid{aspect-ratio:9/16}.rb-cap{padding:16px 4px 0}.rb-cap h3{margin:6px 0}.rb-cap p{margin:0;color:var(--mut)}
+@media (max-width:1000px) and (min-width:701px){.rb{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:700px){.rb{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -24px;padding:0 24px 8px;scroll-padding:0 24px;scrollbar-width:none}.rb::-webkit-scrollbar{display:none}.rb-feat{flex:0 0 74%;scroll-snap-align:start}}
 .brands>*{min-width:0}@media (max-width:700px){.brands{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .page-hero.rh-hero>img{opacity:.12;filter:blur(2px)}
