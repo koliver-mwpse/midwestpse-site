@@ -12,3 +12,8 @@ q&&q.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(q);
   const body=[...d].filter(([k,v])=>v&&k!=='message').map(([k,v])=>`${k}: ${v}`).join('\n')+'\n\n'+(d.get('message')||'');
   location.href=`mailto:koliver@midwestpse.com?subject=${encodeURIComponent('Quote request – '+(d.get('Service')||'General'))}&body=${encodeURIComponent(body)}`});
 document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
+document.querySelectorAll('.views').forEach(w=>w.addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;
+  const card=w.closest('.rb-feat'),b=card.querySelector('.vid');w.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===t));
+  b.dataset.src=t.dataset.src;const v=b.querySelector('video'),i=b.querySelector('img');
+  if(v){v.src=t.dataset.src;v.poster=t.dataset.poster;v.play().catch(()=>{})}else if(i)i.src=t.dataset.poster}));
+document.querySelectorAll('.rb-nav button').forEach(x=>x.addEventListener('click',()=>{const r=x.closest('section').querySelector('.rb');r.scrollBy({left:x.dataset.dir*r.clientWidth*.75,behavior:'smooth'})}));

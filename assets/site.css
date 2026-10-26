@@ -159,9 +159,14 @@ body{background:var(--ink) radial-gradient(1200px 600px at 85% -10%,rgba(70,179,
 @media (max-width:1100px) and (min-width:901px){.nav a{padding:9px 9px;font-size:14px}}
 .split>*,.grid>*{min-width:0}
 .vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
-.rb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
+.rb{display:flex;gap:20px;align-items:start;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:8px}.rb::-webkit-scrollbar{display:none}.rb-feat{flex:0 0 calc(25% - 15px);scroll-snap-align:start}
 .rb-feat .vid{aspect-ratio:9/16}.rb-cap{padding:16px 4px 0}.rb-cap h3{margin:6px 0}.rb-cap p{margin:0;color:var(--mut)}
-@media (max-width:1000px) and (min-width:701px){.rb{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:700px){.rb{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -24px;padding:0 24px 8px;scroll-padding:0 24px;scrollbar-width:none}.rb::-webkit-scrollbar{display:none}.rb-feat{flex:0 0 74%;scroll-snap-align:start}}
+@media (max-width:1000px){.rb{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -24px;padding:0 24px 8px;scroll-padding:0 24px;scrollbar-width:none}.rb::-webkit-scrollbar{display:none}.rb-feat{flex:0 0 74%;scroll-snap-align:start}}
 .brands>*{min-width:0}@media (max-width:700px){.brands{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .page-hero.rh-hero>img{opacity:.12;filter:blur(2px)}
+@media (max-width:1000px) and (min-width:701px){.rb-feat{flex-basis:38%!important}}
+.rb-nav{display:flex;gap:10px;margin-top:16px}.rb-nav button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--ink3);color:var(--txt);font-size:18px;cursor:pointer}.rb-nav button:hover{border-color:var(--acc);color:var(--acc2)}
+.views{display:flex;gap:8px;margin-top:12px}.views button{font:600 12px/1 inherit;padding:7px 12px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--mut);cursor:pointer}.views button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.vid-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.vid-pair .vid{max-width:none}
+@media (max-width:700px){.vid-pair{max-width:340px;margin:0 auto;width:100%}}
+.proj:has(.vid-pair){grid-template-columns:460px 1fr}@media (max-width:900px){.proj:has(.vid-pair){grid-template-columns:1fr}}
