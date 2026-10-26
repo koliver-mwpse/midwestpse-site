@@ -14,7 +14,10 @@ h1,h2,h3,.disp{font-family:"Saira Condensed","Inter",sans-serif;font-weight:800;
 .hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand img{width:50px;height:50px;flex:none}
-.brand b{display:block;font:italic 800 19px/1.05 "Saira Condensed",sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.brand b{display:block;font:italic 800 19px/1.05 "Saira Condensed",sans-serif;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap}
+@media (max-width:1100px) and (min-width:901px){.brand b{font-size:16px}}
+@media (max-width:480px){.brand b{font-size:14px}.brand img{width:40px;height:40px}.brand{gap:9px;min-width:0}.menu-btn{flex:none}}
+@media (max-width:380px){.brand b{font-size:12.5px;letter-spacing:0}.hdr .wrap{padding:0 16px}}
 .brand small{display:block;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);margin-top:3px}
 .nav{display:flex;align-items:center;gap:6px}
 .nav a{text-decoration:none;font-size:14.5px;font-weight:500;color:#d4d4dc;padding:9px 13px;border-radius:9px;transition:.15s}

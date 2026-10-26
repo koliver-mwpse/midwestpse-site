@@ -53,7 +53,7 @@ def page(path, title, desc, body):
 </head><body>
 <div class="lightbar"></div>
 <header class="hdr"><div class="wrap">
-<a class="brand" href="/" aria-label="Midwest Public Safety Equipment home"><img src="/assets/img/logo-sm.webp" alt="" width="50" height="50"><span><b>Midwest Public Safety</b><small>Equipment, LLC</small></span></a>
+<a class="brand" href="/" aria-label="Midwest Public Safety Equipment home"><img src="/assets/img/logo-sm.webp" alt="" width="50" height="50"><b>Midwest Public Safety Equipment, LLC</b></a>
 <button class="menu-btn" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button>
 <nav class="nav">{nav}<a class="btn btn-red" href="/contact/">Get a quote</a></nav>
 </div></header>
